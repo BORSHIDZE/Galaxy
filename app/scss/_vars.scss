@@ -1,0 +1,36 @@
+$accent1: #04052B;
+$accent2: #8346A0;
+$accent3: #420E54;
+$accent4: #C90EB6;
+$accent5: #A32988;
+
+%inter400 {
+  font-family: 'Inter-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%poppins700 {
+  font-family: 'Poppins-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%poppins800 {
+  font-family: 'Poppins-ExtraBold', sans-serif;
+  font-weight: 800;
+}
+
+%poppins500 {
+  font-family: 'Poppins-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%poppins400 {
+  font-family: 'Poppins-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

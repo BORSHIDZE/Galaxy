@@ -3,6 +3,129 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  background-color: $accent1;
+  padding-top: 70px;
+}
+
+.preview {
+  background-image: url('../images/preview/bg.png');
+  @extend %bg;
+  height: 100vh;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url('../images/preview/bg-image.png');
+    width: 554px;
+    height: 421px;
+    @extend %bg;
+    right: 0;
+    bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url('../images/preview/bg-opacity.png');
+    width: 622px;
+    height: 599px;
+    @extend %bg;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+  }
+
+  &__title {
+    @extend %poppins700;
+    font-size: 64px;
+    line-height: 50px;
+    text-align: start;
+    width: 614px;
+    margin-bottom: 60px;
+
+    span {
+      font-size: 36px;
+      line-height: 30px;
+    }
+  }
+}
+
+.about {
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url('../images/about/about-figures.png');
+    position: absolute;
+    width: 534px;
+    height: 354px;
+    @extend %bg;
+    bottom: -250px;
+    left: 0;
+  }
+
+  &__box {
+    width: 650px;
+    height: 650px;
+    margin: 0 auto;
+    margin-top: 160px;
+    position: relative;
+    z-index: 10;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url('../images/about/about-bg.png');
+      @extend %bg;
+      width: 1000px;
+      height: 1000px;
+      top: -120px;
+      left: -150px;
+      z-index: -2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: linear-gradient(to bottom right, $accent3, #0A0A0A);
+      border-radius: 50%;
+      height: 650px;
+      width: 650px;
+      z-index: -1;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+  }
+
+  &__text {
+    width: 466px;
+    margin: 0 auto;
+    margin-top: 40px;
+    line-height: 26px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      @extend %bg;
+      background-image: url('../images/about/girl.svg');
+      width: 530px;
+      height: 895px;
+      top: -340px;
+      right: -340px;
+    }
+  }
+
+}
 
 
 
