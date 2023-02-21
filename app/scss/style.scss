@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'libs';
 
 .header {
   background-color: $accent1;
@@ -147,12 +148,12 @@
     position: absolute;
     content: "";
     background-image: url('../images/work/bg1.png');
-    bottom: 0px;
     @extend %bg;
-    width: 1226px;
-    height: 678px;
+    top: 139px;
+    width: 1526px;
+    height: 862px;
     z-index: -2;
-    left: 500px;
+    left: 370px;
   }
 
   .container {
@@ -285,10 +286,207 @@
       left: 8px;
     }
   }
+}
 
+.explore {
+  position: relative;
+  padding-bottom: 200px;
 
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url('../images/explore/bg1.png');
+    width: 1346px;
+    height: 517px;
+    @extend %bg;
+    top: 425px;
+    left: 200px;
+    z-index: -1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url('../images/explore/bg2.png');
+    width: 100%;
+    height: 1111px;
+    @extend %bg;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__inner {
+    width: 955px;
+    height: 560px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url('../images/explore/1.png');
+      @extend %bg;
+      width: 419px;
+      height: 560px;
+      top: 0;
+      left: 0;
+      opacity: 0.6;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $accent5;
+      width: 477px;
+      height: 560px;
+      border-radius: 30px 0 0 30px;
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url('../images/explore/2.png');
+      top: -240px;
+      right: -170px;
+      width: 364px;
+      height: 301px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url('../images/explore/3.png');
+      bottom: -160px;
+      right: -170px;
+      width: 274px;
+      height: 504px;
+      z-index: 10;
+    }
+  }
+
+  &__text {
+    width: 477px;
+    margin-right: 0;
+    margin-left: auto;
+    background-color: rgb(100%, 100%, 100%, 0.5);
+    border-radius: 0px 30px 30px 0px;
+    color: #2A2C3A;
+    font-size: 20px;
+    line-height: 30px;
+    @extend %poppins400;
+    height: 560px;
+    padding: 25px 15px;
+    z-index: -1;
+  }
+
+  .slick-dots {
+    margin-left: 680px;
+    margin-top: -45px;
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 82px;
+    font-size: 0px;
+  }
+
+  button {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(114.29deg, #04062C -8.55%, rgba(249, 249, 253, 0) 225.75%);
+    border-radius: 50%;
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}
+
+.artworks {
+  margin-bottom: 390px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url('../images/artworks/bg1.png');
+    @extend %bg;
+    width: 100%;
+    height: 1204px;
+    top: -50px;
+    left: 0;
+    z-index: -1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url('../images/artworks/bg2.png');
+    @extend %bg;
+    width: 100%;
+    height: 1204px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .title {
+    margin-bottom: 160px;
+    padding-top: 200px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url('../images/artworks/bg3.png');
+      top: 0;
+      left: 0;
+      width: 370px;
+      height: 255px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 908px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    transition: all .3s;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 21px;
+    color: #979EA6;
+    @extend %poppins700;
+    margin-left: 10px;
+  }
+
+  &__img {
+    transition: all .3s;
+
+    &:hover {
+      background: url(tumblr_mvqz3p9fYO1qaprfso1_r1_1280.jpg);
+      filter: drop-shadow(0px 5px 10px rgba(57, 120, 122, 0.47));
+    }
+  }
 
 }
+
 
 
 
